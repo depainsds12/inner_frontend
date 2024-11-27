@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --light-purple-1: #c4caf0;
+  --light-purple-2: #dbb7fc;
+  --mid-purple-1: #aa9dd0;
+  --mid-purple-2: #9368bc;
+  --mid-purple-3: #8858b5;
+  --mid-purple-4: #af5caa;
+  --mid-purple-5: #bb4bad;
+  --dark-purple-1: #8757b5;
+  --dark-purple-2: #5e3d84;
+  --dark-purple-3: #3f225b;
+  --orange-1: #f9a819;
+  --orange-2: #faa81a;
+  --pink-1: #ff008a;
+  --yellow-1: #fff500;
+  --yellow-2: #fff200;
+}
+
+::selection {
+  color: var(--light-purple-1);
+  background: var(--dark-purple-3);
+}
+
+.swiper-pagination {
+  position: relative !important;
+}
+/* Webkit browsers (Chrome, Safari, newer Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 transparent;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+*,
+*::after,
+*::before {
+  font-family: "Montserrat Alternates", cursive;
+  /* transition: .3s ease; */
+}
+
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+body {
+  @apply bg-[#7369A0];
+}
+
+.responsive-container {
+  @apply px-6 md:px-12;
+}
+
+.pseudo-clip-path::before {
+  clip-path: var(--path);
+  @apply absolute z-[-1] h-full w-full;
+}
+
+/* scale the component for different display screens */
+.component-scale {
+  @apply origin-top scale-[1] sm:scale-[0.65] md:scale-[0.7] lg:scale-[0.8] xl:scale-[1];
+}
+
+/* margin fix for components that leave a gap at the bottom on scaling. 
+  Apply it to the bottom most element of the component to align the layouts
+*/
+.scale-margin-fix {
+  @apply -mb-[150px] sm:-mb-[350px] md:-mb-[250px] lg:-mb-[200px] xl:mb-0;
+}
+
+/* footer {
+  box-shadow: inset 0px 30px 60px var(--light-purple-1);
+} */
+
+.custom-checkbox-searchdrawer[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: grid;
+  place-items: center;
+
+  border: 2px solid #c3abda;
+  background-color: #dfdcf1;
+
+  inline-size: 1rem;
+  aspect-ratio: 1;
+
+  transform: rotate(45deg);
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+.custom-checkbox-searchdrawer[type="checkbox"]::before {
+  content: "";
+
+  width: 100%;
+  height: 100%;
+  background-color: #c283be;
+
+  transform: scale(0);
+  transition: 0.3s ease;
+}
+.custom-checkbox-searchdrawer[type="checkbox"]:checked {
+  border-color: white;
+}
+.custom-checkbox-searchdrawer[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.octagon-text-size * {
+  font-size: 13px !important;
+}
+
+.yellow-gr::before {
+  background: linear-gradient(to right, yellow, white);
+}
+
+/***** Chrome, Safari, Opera and Edge Chromium styles *****/
+/* slider track */
+.ai-meter-slider {
+  background-image: linear-gradient(to right, yellow, black);
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+}
+
+/* Removes default focus */
+.slider-container input[type="range"]:focus {
+  outline: none;
+}
+.slider-container input[type="range"]::-webkit-slider-runnable-track {
+  background-color: transparent;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+  z-index: 30;
+}
+
+.slider-container input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 31px;
+  background: linear-gradient(to right, yellow, black);
+  outline: none;
+  margin: 0;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  transform: translate(0%, -35px);
+  appearance: none;
+  width: 80px;
+  height: 80px;
+  background: url("/assets/journal_creation/range-hook.svg") no-repeat center; /* Yellow color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.slider-container input[type="range"]::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  background-color: #fbbf24;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.backdrop-blur-4xl {
+  backdrop-filter: blur(24px); /* equivalent to 3xl in Tailwind */
+  -webkit-backdrop-filter: blur(24px); /* Safari fallback */
+}

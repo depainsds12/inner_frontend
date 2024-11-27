@@ -1,0 +1,6 @@
+{
+  "recommendations": [
+    "esbenp.prettier-vscode", // Prettier - Code formatter
+    "dbaeumer.vscode-eslint" // ESLint
+  ]
+}

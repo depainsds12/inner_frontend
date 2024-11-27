@@ -1,0 +1,55 @@
+// StreamGraph.stories.js
+import StreamGraph from "@/src/components/__old__/dashboard/waveChart";
+
+export default {
+  title: "Old/DashboardStreamGraph",
+  component: StreamGraph,
+};
+
+export const Default = {
+  args: {
+    data: [
+      { day: 1, flowers: 0, shadows: 0, ripples: 0 },
+      { day: 2, flowers: 1, shadows: 1, ripples: 1 },
+      { day: 3, flowers: 1, shadows: 1, ripples: 1 },
+      { day: 4, flowers: 2, shadows: 2, ripples: 1 },
+      { day: 5, flowers: 1, shadows: 2, ripples: 2 },
+      { day: 6, flowers: 3, shadows: 9, ripples: 3 },
+      { day: 7, flowers: 2, shadows: 2, ripples: 2 },
+      { day: 8, flowers: 2, shadows: 2, ripples: 2 },
+      { day: 9, flowers: 1, shadows: 1, ripples: 1 },
+      { day: 10, flowers: 1, shadows: 1, ripples: 1 },
+      { day: 11, flowers: 0, shadows: 0, ripples: 0 },
+      { day: 12, flowers: 1, shadows: 3, ripples: 2 },
+      { day: 13, flowers: 2, shadows: 4, ripples: 3 },
+      { day: 14, flowers: 3, shadows: 5, ripples: 4 },
+      { day: 15, flowers: 4, shadows: 4, ripples: 5 },
+      { day: 16, flowers: 5, shadows: 6, ripples: 6 },
+      { day: 17, flowers: 6, shadows: 5, ripples: 5 },
+      { day: 18, flowers: 7, shadows: 7, ripples: 6 },
+      { day: 19, flowers: 6, shadows: 8, ripples: 5 },
+      { day: 20, flowers: 5, shadows: 7, ripples: 4 },
+      { day: 21, flowers: 4, shadows: 6, ripples: 4 },
+      { day: 22, flowers: 3, shadows: 5, ripples: 3 },
+      { day: 23, flowers: 2, shadows: 4, ripples: 2 },
+      { day: 24, flowers: 3, shadows: 6, ripples: 4 },
+      { day: 25, flowers: 4, shadows: 7, ripples: 5 },
+      { day: 26, flowers: 5, shadows: 9, ripples: 6 },
+      { day: 27, flowers: 6, shadows: 10, ripples: 7 },
+      { day: 28, flowers: 7, shadows: 8, ripples: 8 },
+      { day: 29, flowers: 6, shadows: 7, ripples: 6 },
+      { day: 30, flowers: 5, shadows: 6, ripples: 5 },
+      { day: 31, flowers: 4, shadows: 5, ripples: 4 },
+      { day: 32, flowers: 3, shadows: 4, ripples: 3 },
+      { day: 33, flowers: 2, shadows: 3, ripples: 2 },
+      { day: 34, flowers: 1, shadows: 2, ripples: 1 },
+      { day: 35, flowers: 0, shadows: 1, ripples: 0 },
+      { day: 36, flowers: 1, shadows: 3, ripples: 1 },
+      { day: 37, flowers: 2, shadows: 5, ripples: 3 },
+      { day: 38, flowers: 3, shadows: 6, ripples: 4 },
+      { day: 39, flowers: 4, shadows: 7, ripples: 5 },
+      { day: 40, flowers: 3, shadows: 8, ripples: 4 },
+      { day: 41, flowers: 2, shadows: 7, ripples: 3 },
+    ],
+  },
+};

@@ -1,0 +1,5 @@
+.mask1 {
+  -webkit-mask-image: url(/public/assets/journal-flow/infusions-drop-icon.svg);
+  mask-image: url(/public/assets/journal-flow/infusions-drop-icon.svg);
+  mask-repeat: no-repeat;
+}

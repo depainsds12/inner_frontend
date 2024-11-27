@@ -1,0 +1,24 @@
+# Defaults
+.git
+.husky
+.next
+next-env.d.ts
+node_modules
+package-lock.json
+public
+.gitignore
+README.md
+.env*
+
+# Build outputs
+dist
+build
+out
+
+# Coverage reports
+coverage
+
+# Cache
+.eslintcache
+.npm
+.prettiercache
